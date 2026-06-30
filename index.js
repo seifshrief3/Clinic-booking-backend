@@ -2,13 +2,15 @@ import express from "express";
 import cors from "cors";
 import doctorsRoute from "./routes/DoctorsRoute.js";
 import appointementsRoute from "./routes/AppointementsRoute.js";
+import dotenv from "dotenv";
 
 
 const app = express();
+dotenv.config();
 
 app.use(cors({
   origin: [
-    "https://clinic-booking-tan.vercel.app/",
+    "https://clinic-booking-tan.vercel.app",
     "http://localhost:5173"
   ],
   credentials: true
